@@ -1,58 +1,65 @@
 <html>
 Requirements: <br>
 Be familiar with the concept of DSU.
+<div dir="rtl">
 <br>
-<h1>Slippery slopes</h1>
+<h1>غار یخی</h1>
 <br><br>
+کیانوش به همراه n-1 تا از دانشجویان توی یک غار یخی گیر افتادند. غار را به صورت یک
+    صفحه در نظر بگیرید (از بالا). این n نفر در n نقطه ی متمایز قرار گرفته اند (مختصات صحیح) و هر کدام در نقطه خود مقدار شن برای
+    جلوگیری از لغزش ریخته اند.
+    کیانوش برای بالا بردن روحیه ی آنها، تصمیم گرفته توی این غار لیز بخوره و به هرکدوم یه "خدا رو شکر" بگه.
+    ولی همونطور که حدس میزنید غار لیزه. کیانوش توی یکی از 4 جهت بالا، پایین، چپ و راست میتونه
+    لیز بخوره و تا به یکی از افراد دیگه یا محل شنی نرسه نمیتونه بایسته.
+<br>
+    با این وضع ممکنه نتونه با شروع از جای اولیش به همه برسه. شما باید مینیمم
+    تعداد نقاط دیگه ای که با شنی کردنشون کیانوش بتونه کارش رو انجام بده پیدا بکنید.
+<br>
+    شما باید تابع solve را که n و لیست نقاط را ورودی میگیرد را پر بکنید.
+<br>
+    این تابع یک عدد که مینیمم نقاط شنی اضافه هست رو برمیگرداند.
+<br>
+<br>
+    تضمین شده است که:
+    <br>
+    <p dir="ltr">1 &le; n &le; 100</p>
+    <p dir="ltr">1 &le; x<sub>i</sub>, y<sub>i</sub> &le; 1000</p>
 
-Kianoosh and n-1 others are trapped in an ice cave. Imagine the cave as a plane. The n people
-are standing in n distinct points. Kianoosh decides to go and say hi to each one. But
-in order to do so, he can only move up, down, right and left. But the floor is slippery so
-he will keep sliding in that direction until he reaches one of the other people who will stop him.
 <br>
-Unfortunately there might need to be more stopping points in the cave to reach everyone. You
-must find the minimum amount of extra stopping points needed to ensure he can reach everyone.
+</div>
 
-<br>
-You must fill in the solve function which takes in n, and a list of tuples with each points
-coordinates.
-<br>
-The function must output a single number. The minimum amount of extra stopping points needed
-to reach every point.
-<br>
-<br>
-It is known that 1 &le; n &le; 100, 1 &le; x<sub>i</sub>, y<sub>i</sub> &le; 1000
+<h3 dir="rtl">مثال ها</h3>
 
-<br>
-
-<h3>Examples</h3>
-
-<h4>Example 1</h4>
+<h4 dir="rtl">مثال 1</h4>
 n = 2 <br>
 points = [(2, 1), (1, 2)] <br>
 output = 1 <br>
 
-<h4>Example 2</h4>
+<h4 dir="rtl">مثال 2</h4>
 n = 2 <br>
 points = [(2, 1), (4, 1)] <br>
 output = 0 <br>
 
 
-<div class="hint">
-    If you can get from A to B and from B to C, then you can get from A to C.
+<div class="hint" dir="rtl">
+    اگر بشه از A به B رفت و از B به C رفت میشه از A به C هم رفت.
 </div>
 
-<div class="hint">
-    Consider points where you can go from each one to the others. What happens if you add a new stop point?
+<div class="hint" dir="rtl">
+    نقاطی را در نظر بگیرید که بشه از هر کدوم به اونیکی رفت. اگر یک نقطه ی جدید
+    را شنی کنیم چه میشود؟
 </div>
 
-<div class="hint">
-    You can go directly from A to B if A.x = B.y or A.y = B.y
+<div class="hint" dir="rtl">
+    میشه مسقیما از A به B رفت اگه:
+    A.x = B.x
+    و یا
+    A.y = B.y
 </div>
 
-<div class="hint">
-    Make a new DSU with n sets, each for one point. If you can go directly from A to B, then
-    unite their sets. Now how many stopping points do we need?
+<div class="hint" dir="rtl">
+    یک DSU با n تا عضو در نظر بگیرید که هر عضو متناظر یک نقطه است. اگر بشه مستقیما
+    از A به B رفت، مجموعه هایشان را اجتماع بگیرید. حالا چند تا نقطه ی شنی اضافه میخواهیم؟
 </div>
 
 

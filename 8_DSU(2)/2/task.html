@@ -2,45 +2,46 @@
 Requirements: <br>
 Be familiar with the concept of DSU.
 <br>
-<h1>Matin & Kianoosh</h1>
+
+<div dir="rtl">
+<h1>متین و کیانوش</h1>
+<br><br>
+متین و کیانوش خیلی دوستای صمیمی هستند. اینقدر صمیمی اند که بگفته ی خودشون تو همه چیز با هم
+  هم نظرن. یک روز که با هم قصد سفر کرده بودند، هر کدام تصمیم گرفتند پیراهنی بپوشند که روی
+  آن یک لوگو قرار دارد. این لوگو ها string هایی به طول n با حروف کوچک انگلیسی اند.
+  ولی وقتی به هم میرسند، الگو هاشون فرق میکند.
+<br>
+  همانطور که میشد حدس زد، این اصلا براشون قابل قبول نیست. خوشبختانه یک خیاط در نزدیکی هست
+  و میتواند آنها را کمک کند. خیاط به این طریق عمل میکند که 1 دلار برای هر یک زوج مرتب از حروف
+  میگیرد. سپس توی هر دو پیرهن، میتوناد هر کدوم ازین زوج مرتب ها را به هر تعداد بار که میخواهد
+  با هم عوض کند.
+<br>
+  چون متین و کیانوش دوست ندارند پول زیادی خرج کنند، از شما میخواهند تا مینیمم پلی که باید
+  خرج کنند تا پیرهن هایشان یکی بشن را بیابید.
+<br>
 <br><br>
 
-Matin and Kianoosh are great friends. So great that they always brag about
-their points in common to others who couldn't care less. One day, in order
-to do this, they decided to wear T-shirts with matching logos. Each logo is
-a string of length n with lowercase english letters.
-But when they see each other, their strings are different.
 <br>
-Luckily, a tailor is nearby. The tailor charges 1 dollar for 1 rule. A rule
-is a pair of 2 characters. Once a rule is chosen, any of the two that are on either
-t-shirts can be changed into one another unlimited amount of times.
+  شما باید تابع solve را که n طول رشته ها و a,b که دو رشته ی n تایی هستند را میگیرد پر بکنید.
 <br>
-Because Matin and Kianoosh don't like spending money, you must find the
-minimum amount of dollars they must spend to make their t-shirts match.
-<br><br>
-
+  خروجی این تابع یک دوتایی است. عضو اول مینیمم مقدار پول است.
+  عضو دوم لیستی از دو تایی های حروف است که به ازای هر کدوم یدونه پول پرداخت میکنیم.
 <br>
-You must fill in the solve function which takes in n, and a, b which are two
-strings of length n consisting of lowercase English letters.
 <br>
-The function outputs a tuple. The first element is the minimum price to pay.
-The second is a list of tuples. Each tuple consists of 2 characters and
-represent a rule.
-<br>
+  تضمین شده است که
+  n &le; 100,000
+</div>
 <br>
 
-It is known that 1 &le; n &le; 100,000
-<br>
+<h3 dir="rtl">مثال ها</h3>
 
-<h3>Examples</h3>
-
-<h4>Example 1</h4>
+<h4>مثال 1</h4>
 n = 3 <br>
 a = 'abb' <br>
 b = 'dad' <br>
 output = [2, [('a', 'd'), ('b', 'a')]] <br>
 
-<h4>Example 2</h4>
+<h4 dir="rtl">مثال 2</h4>
 n = 8 <br>
 a = 'drpepper' <br>
 b = 'cocacola' <br>
@@ -48,28 +49,28 @@ output = [7, [('l', 'e'), ('e', 'd'), ('d', 'c'), ('p', 'c'),
 ('o', 'p'), ('o', 'r'), ('a', 'r')]] <br>
 
 
-
-
-<div class="hint">
-  Try to imagine a rule as a permanent edge between the two characters.
+<div class="hint" dir="rtl">
+  هر دو تایی که به ازایش پرداخت میکنیم را به عنوان یک یال بین آندو کاراکتر در نظر بگیرید.
 </div>
 
-<div class="hint">
-  If ('a', 'b') and ('a', 'c') are two of the rules do we need ('b', 'c')?
+<div class="hint" dir="rtl">
+  اگر ('a', 'b') و ('a', 'c') را داشته باشیم جزو خرید هامون، آیا
+  ('b', 'c')
+  رو هم نیاز داریم؟
 </div>
 
-<div class="hint">
-  In order to be able to change k letters into one another, you'll need k-1 rules.
+<div class="hint" dir="rtl">
+  برای تغییر k تا حرف به هم باید حداقل k-1 دلار هزینه کنیم. (چرا؟)
 </div>
 
-<div class="hint">
-  Whenever a rule is added, it works exactly as a union in their respective DSUs.
+<div class="hint" dir="rtl">
+  هر وقت یک دو تایی اضافه میشود، مانند یک اجتماع عمل میکند. (اجتماع چه مجموعه هایی؟)
 </div>
 
-<div class="hint">
-  Define a 26 sized DSU. Whenever two characters are different,
-  they need to be in the same DSU in the end. So unite them!
+<div class="hint" dir="rtl">
+  یک DSU اه 26 تایی در نظر بگیرید.
+  هر وقت 2 کاراکتر توی دو رشته مساوی نبودند، باید در نهایت توی یک مجموعه باشند. پس
+  اجتماع میگیریم.
 </div>
-
 
 </html>
